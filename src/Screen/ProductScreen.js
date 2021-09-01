@@ -21,7 +21,7 @@ function ProductScreen() {
     dispatch(listProductsDetails(id))
    
 
-  }, [ dispatch,]);
+  }, [ dispatch,id]);
 
   const addToCartHandler =() => {
     history.push(`/cart/${id} ? qty=${qty}`)

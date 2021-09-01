@@ -7,6 +7,8 @@ import Header from './Component/Header';
 import HomeScreen from './Screen/HomeScreen';
 import ProductScreen from './Screen/ProductScreen';
 import CartScreen from './Screen/CartScreen';
+import Signin from './Authentication/Signin';
+import Signup from './Authentication/Signup';
 // import Student from './Component/Student';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Header />
       <main className='py-3'>
         <Container>
+          <Route exact path='/signin' component={Signin} />
+          <Route exact path='/signin' component={Signup} />  
           <Route exact path='/' component={HomeScreen} />
           <Route exact path='/product/:id' component={ProductScreen} />
           <Route exact path='/cart/:id?' component={CartScreen} />
