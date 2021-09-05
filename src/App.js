@@ -9,6 +9,7 @@ import ProductScreen from './Screen/ProductScreen';
 import CartScreen from './Screen/CartScreen';
 import Signin from './Authentication/Signin';
 import Signup from './Authentication/Signup';
+import ShippingScreen from './Screen/ShippingScreen';
 // import Student from './Component/Student';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <main className='py-3'>
         <Container>
+          <Route exact path='.shipping' component={ShippingScreen}/>
           <Route exact path='/signin' component={Signin} />
           <Route exact path='/signin' component={Signup} />  
           <Route exact path='/' component={HomeScreen} />
