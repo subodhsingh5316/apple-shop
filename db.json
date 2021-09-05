@@ -81,12 +81,31 @@
       "phone": " "
     }
   ],
+  "sigin": [
+    {
+      "id": 1,
+      "name": "Subodh",
+      "email": "test12@gmail.com",
+      "password": "1234567890"
+    }
+  ],
   "signup": [
     {
       "id": 1,
       "name": "Subodh",
       "email": "test12@gmail.com",
       "password": "1234567890"
+    },
+    {
+      "name": "subodh@gmail.com",
+      "email": "123",
+      "id": 2
+    },
+    {
+      "name": "subodh",
+      "email": "subodh@gmail.com",
+      "password": "123",
+      "id": 3
     }
   ]
 }

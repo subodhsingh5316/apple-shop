@@ -6,7 +6,7 @@ import Message from '../Component/Message';
 import Loader from '../Component/Loader';
 import {signUP} from '../Action/userAction'
 
-const Signup = ({props,handleShow,isSignUp,setIsSignUp}) => {
+const Signup = ({props,handleClose,isSignUp,setIsSignUp}) => {
     const [name,setName] =useState("")
     const [cPassword,setCPassword] =useState("")
     const [email,setEmail] =useState("")
@@ -33,7 +33,8 @@ const Signup = ({props,handleShow,isSignUp,setIsSignUp}) => {
         if(password !== cPassword){
             setMessage("Password do not match")
         }else{
-            dispatch(signUP(email,password))
+            dispatch(signUP(name,email,password))
+            handleClose()
         }
     }
     return (
@@ -58,8 +59,8 @@ const Signup = ({props,handleShow,isSignUp,setIsSignUp}) => {
                     <Form.Control type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCPassword" >
-                    <Form.Label>Phone Number</Form.Label>
-                    <Form.Control type="Phone" placeholder="Enter Confirm Password" value={cPassword} onChange={(e)=>setCPassword(e.target.value)} />
+                    <Form.Label>Confirm Password</Form.Label>
+                    <Form.Control type="cpassword" placeholder="Enter Confirm Password" value={cPassword} onChange={(e)=>setCPassword(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />

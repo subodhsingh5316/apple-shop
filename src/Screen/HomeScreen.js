@@ -5,6 +5,7 @@ import Message from "../Component/Message";
 import Loader from "../Component/Loader";
 import Product from "../Component/Product";
 import { listProducts } from '../Action/productAction'
+import CarouselScreen from "./CarouselScreen";
 function HomeScreen() {
     const dispatch = useDispatch()
 
@@ -25,6 +26,7 @@ function HomeScreen() {
                 <Message variant='danger'>{error}</Message>
             ) : (
                 <Row>
+                   <CarouselScreen/>
                     {products.map((product) => (
                         <Col key={product.id} sm={12} md={6} lg={4} xl={3} >
                             <Product product={product} />

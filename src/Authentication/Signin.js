@@ -6,7 +6,7 @@ import Message from '../Component/Message';
 import Loader from '../Component/Loader';
 import {login} from '../Action/userAction'
 
-const Signin = ({props,handleShow,isSignUp,setIsSignUp,location}) => {
+const Signin = ({props,handleClose,isSignUp,setIsSignUp,location}) => {
      const [email, setEmail]=useState("")
      const [password,setPassword]=useState("")
      const dispatch = useDispatch()
@@ -18,13 +18,14 @@ const Signin = ({props,handleShow,isSignUp,setIsSignUp,location}) => {
 
      useEffect (() => {
          if(userInfo){
-             history.push(' ')
+             history.push('/')
          }
      },[history,userInfo])
 
      const submitHandlar=(e)=>{
         e.preventDefault()
         dispatch(login(email,password))
+        handleClose()
     }
     return (
         <div>

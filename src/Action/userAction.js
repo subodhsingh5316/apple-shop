@@ -14,9 +14,7 @@ export const login = (email, password) => async (dispatch) =>{
             }
         }
       
-        const { data } = await axios.post(Common.GRAPHQL_API, {
-            query: Common.LOGIN_USER,
-          },{
+        const { data } = await axios.post('http://localhost:3001/signin',{
             email,password
         },
         config
@@ -58,10 +56,8 @@ export const signUP = (name, email, password) => async (dispatch) =>{
             }
         }
       
-        const { data } = await axios.post(Common.GRAPHQL_API, {
-            query: Common.REGISTER_USER,
-          },{
-           name:name, email:email,password:password
+        const { data } = await axios.post('http://localhost:3001/signup',{
+           name, email,password
         },
         config
         )

@@ -10,7 +10,7 @@ function Header({props}) {
   const dispatch = useDispatch()
   const [show, setShow] = useState(false);
   const [ isSignIn, isSetSignIn ] = useState(false)
-  const [ isSignUp, setIsSignUp ] = useState(true)
+  const [ isSignUp, setIsSignUp ] = useState(false)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -34,7 +34,8 @@ function Header({props}) {
               userInfo ? (
                 <NavDropdown title = {userInfo.name}>
                   <NavDropdown.Item onClick={logoutHandlar}>Logout</NavDropdown.Item>
-                </NavDropdown>
+                  {console.log(userInfo)}
+                </NavDropdown> 
               ):(
                 <LinkContainer to='' onClick={handleShow}>
                 <Nav.Link><i className="fas fa-user"></i> SIGNIN</Nav.Link>
@@ -49,10 +50,10 @@ function Header({props}) {
         {
           isSignUp 
           ? (
-            <Signin isSignUp={isSignUp} setIsSignUp={setIsSignUp}/>
+            <Signin isSignUp={isSignUp} setIsSignUp={setIsSignUp} handleClose={handleClose}/>
           ) : (
             
-            <Signup isSignUp={isSignUp} setIsSignUp={setIsSignUp} />
+            <Signup isSignUp={isSignUp} setIsSignUp={setIsSignUp} handleClose={handleClose} />
           )
         }
       </Modal>
