@@ -61,12 +61,16 @@ export const REGISTER_USER = `mutation{
   }
 }`;
 
-export const LOGIN_USER = `mutation{
+export const LOGIN_USER = ` mutation{
   login(
-    email:"test222@gmail.com",
+    email:"test1@gmail.com",
     password:"1234567890"){
       success
       statusCode
       message
+    data{
+      api_token
+    }
   }
-}`
+}
+`

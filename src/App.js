@@ -11,11 +11,13 @@ import Signin from './Authentication/Signin';
 import Signup from './Authentication/Signup';
 import ShippingScreen from './Screen/ShippingScreen';
 // import Student from './Component/Student';
+import CarouselScreen from "./Screen/CarouselScreen"
 
 function App() {
   return (
     <Router>
       <Header />
+      {/* <CarouselScreen/> */}
       <main className='py-3'>
         <Container>
           <Route exact path='.shipping' component={ShippingScreen}/>

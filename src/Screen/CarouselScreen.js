@@ -3,7 +3,7 @@ import { Carousel } from 'react-bootstrap'
 
 const CarouselScreen = () => {
     return (
-        <div>
+        <div >
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators" indicator={false}>
                     {/* <li data-target="#carouselExampleIndicators" data-slide-to="1" className=""></li>
@@ -12,21 +12,21 @@ const CarouselScreen = () => {
                 </ol>
                 <div className="carousel-inner"  >
                     <div className="carousel-item active">
-                        <img className="d-block w-100" src="/images/airpods.jpg" alt="airpods" style={{ width: "100px" }} />
+                        <img className="d-block w-100" src="/images/airpods.jpg" alt="airpods"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="/images/phone.jpg" alt="phone" style={{ width: "100px" }} />
+                        <img className="d-block w-100" src="/images/phone.jpg" alt="phone"/>
                     </div>
                     <div className="carousel-item">
-                        <img className="d-block w-100" src="/images/camera.jpg" alt="cannon" style={{ width: "100px" }} />
+                        <img className="d-block w-100" src="/images/camera.jpg" alt="cannon"/>
                     </div>
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="false" style={{ backgroundColor: 'red' }}></span>
+                    <span className="carousel-control-prev-icon" aria-hidden="false" style={{ backgroundColor: 'grey',width:"40px",height:"40px",borderRadius:"40px" }}></span>
                     <span className="sr-only">Previous</span>
                 </a>
                 <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon " aria-hidden="false" style={{ backgroundColor: 'red' }}></span>
+                    <span className="carousel-control-next-icon " aria-hidden="false" style={{ backgroundColor: 'grey',width:"40px",height:"40px",borderRadius:"40px" }}></span>
                     <span className="sr-only">Next</span>
                 </a>
             </div>

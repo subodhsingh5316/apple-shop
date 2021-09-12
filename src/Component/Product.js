@@ -6,9 +6,9 @@ import Rating from "./Rating";
 function Product({ product }) {
   console.log(product);
   return (
-    <Card className="my-3 py-3 rounded"style={{height:'90vh'}}>
+    <Card className="my-3 py-3 rounded"style={{height:'70vh'}}>
       <Link to={`/product/${product.id}`}>
-        <Card.Img src={product.image} variant="top" style={{height:'40vh'}}/>
+        <Card.Img src={product.image} variant="top" style={{height:'30vh'}}/>
       </Link>
       <Card.Body>
         <Link to={`/product/${product.id}`}>
